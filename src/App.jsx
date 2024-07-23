@@ -1,4 +1,7 @@
+// src/App.jsx
+
 import React, { useState } from 'react';
+import Dropdown from './component/dropdown';
 
 const App = () => {
   const boards = [
@@ -55,85 +58,43 @@ const App = () => {
   const [selectedGrade, setSelectedGrade] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
 
-  
-
-  
-
   const dropdownContainerStyle = {
     display: 'flex',
     justifyContent: 'center',
     gap: '20px',
-  };
-
-  const dropdownStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  };
-
- 
-
-  const selectStyle = {
-    padding: '10px',
-    fontSize: '16px',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-    width: '150px',
+    padding: '20px',
   };
 
   return (
-    
-      <div style={dropdownContainerStyle}>
-        <div style={dropdownStyle}>
-          
-          <select
-            style={selectStyle}
-            value={selectedBoard}
-            onChange={e => {
-              setSelectedBoard(e.target.value);
-              setSelectedGrade('');
-              setSelectedSubject('');
-            }}
-          >
-            <option value="">Board</option>
-            {boards.map(board => (
-              <option key={board.id} value={board.id}>{board.name}</option>
-            ))}
-          </select>
-        </div>
-        <div style={dropdownStyle}>
-          
-          <select
-            style={selectStyle}
-            value={selectedGrade}
-            onChange={e => {
-              setSelectedGrade(e.target.value);
-              setSelectedSubject('');
-            }}
-            disabled={!selectedBoard}
-          >
-            <option value="">Grade</option>
-            {selectedBoard && gradesData[selectedBoard].map(grade => (
-              <option key={grade.id} value={grade.id}>{grade.name}</option>
-            ))}
-          </select>
-        </div>
-        <div style={dropdownStyle}>
-          
-          <select
-            style={selectStyle}
-            value={selectedSubject}
-            onChange={e => setSelectedSubject(e.target.value)}
-            disabled={!selectedGrade}
-          >
-            <option value="">Subject</option>
-            {selectedGrade && subjectsData[selectedGrade].map(subject => (
-              <option key={subject.id} value={subject.id}>{subject.name}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-    
+    <div style={dropdownContainerStyle}>
+      <Dropdown
+        placeholder="Board"
+        options={boards}
+        value={selectedBoard}
+        onChange={e => {
+          setSelectedBoard(e.target.value);
+          setSelectedGrade('');
+          setSelectedSubject('');
+        }}
+      />
+      <Dropdown
+        placeholder="Grade"
+        options={selectedBoard ? gradesData[selectedBoard] : []}
+        value={selectedGrade}
+        onChange={e => {
+          setSelectedGrade(e.target.value);
+          setSelectedSubject('');
+        }}
+        disabled={!selectedBoard}
+      />
+      <Dropdown
+        placeholder="Subject"
+        options={selectedGrade ? subjectsData[selectedGrade] : []}
+        value={selectedSubject}
+        onChange={e => setSelectedSubject(e.target.value)}
+        disabled={!selectedGrade}
+      />
+    </div>
   );
 };
 

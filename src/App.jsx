@@ -1,62 +1,74 @@
-// src/App.jsx
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dropdown from './component/dropdown';
 
 const App = () => {
-  const boards = [
-    { id: 'icse', name: 'ICSE' },
-    { id: 'cbse', name: 'CBSE' },
-  ];
-
-  const gradesData = {
-    icse: [
-      { id: '1', name: 'Grade 1' },
-      { id: '2', name: 'Grade 2' },
-      { id: '3', name: 'Grade 3' },
-      { id: '4', name: 'Grade 4' },
-      { id: '5', name: 'Grade 5' },
-    ],
-    cbse: [
-      { id: '11', name: 'Grade 11' },
-      { id: '12', name: 'Grade 12' },
-    ],
-  };
-
-  const subjectsData = {
-    1: [
-      { id: 'hindi', name: 'Hindi' },
-      { id: 'english', name: 'English' },
-    ],
-    2: [
-      { id: 'hindi', name: 'Hindi' },
-      { id: 'english', name: 'English' },
-    ],
-    3: [
-      { id: 'hindi', name: 'Hindi' },
-      { id: 'english', name: 'English' },
-    ],
-    4: [
-      { id: 'hindi', name: 'Hindi' },
-      { id: 'english', name: 'English' },
-    ],
-    5: [
-      { id: 'hindi', name: 'Hindi' },
-      { id: 'english', name: 'English' },
-    ],
-    11: [
-      { id: 'pcm', name: 'PCM' },
-      { id: 'pcb', name: 'PCB' },
-    ],
-    12: [
-      { id: 'pcm', name: 'PCM' },
-      { id: 'pcb', name: 'PCB' },
-    ],
-  };
+  const [data, setData] = useState({});
+  const [boards, setBoards] = useState([]);
+  const [grades, setGrades] = useState([]);
+  const [subjects, setSubjects] = useState([]);
+  const [specializations, setSpecializations] = useState([]);
 
   const [selectedBoard, setSelectedBoard] = useState('');
   const [selectedGrade, setSelectedGrade] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('');
+  const [selectedSpecialization, setSelectedSpecialization] = useState('');
+
+  useEffect(() => {
+    // Fetch the data from the JSON file
+    fetch('/unitData.json')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        const boardOptions = Object.keys(data).map(board => ({
+          id: board,
+          name: Object.values(data[board])[0]?.[Object.keys(data[board])[0]]?.[Object.keys(Object.values(data[board])[0])[0]]?.[Object.keys(Object.values(Object.values(data[board])[0])[0])[0]]?.boardDisplayName || board
+        }));
+        setBoards(boardOptions);
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  useEffect(() => {
+    if (selectedBoard) {
+      const gradeOptions = Object.keys(data[selectedBoard]).map(grade => ({
+        id: grade,
+        name: Object.values(data[selectedBoard][grade])[0]?.[Object.keys(data[selectedBoard][grade])[0]]?.[Object.keys(Object.values(data[selectedBoard][grade])[0])[0]]?.gradeDisplayName || grade
+      }));
+      setGrades(gradeOptions);
+    } else {
+      setGrades([]);
+    }
+    setSelectedGrade('');
+    setSelectedSubject('');
+    setSelectedSpecialization('');
+  }, [selectedBoard, data]);
+
+  useEffect(() => {
+    if (selectedGrade) {
+      const subjectOptions = Object.keys(data[selectedBoard][selectedGrade]).map(subject => ({
+        id: subject,
+        name: Object.values(data[selectedBoard][selectedGrade][subject])[0]?.[Object.keys(data[selectedBoard][selectedGrade][subject])[0]]?.subjectDisplayName || subject
+      }));
+      setSubjects(subjectOptions);
+    } else {
+      setSubjects([]);
+    }
+    setSelectedSubject('');
+    setSelectedSpecialization('');
+  }, [selectedGrade, selectedBoard, data]);
+
+  useEffect(() => {
+    if (selectedSubject) {
+      const specializationOptions = Object.keys(data[selectedBoard][selectedGrade][selectedSubject]).map(spec => ({
+        id: spec,
+        name: Object.values(data[selectedBoard][selectedGrade][selectedSubject][spec])[0]?.specializationDisplayName || spec
+      }));
+      setSpecializations(specializationOptions);
+    } else {
+      setSpecializations([]);
+    }
+    setSelectedSpecialization('');
+  }, [selectedSubject, selectedGrade, selectedBoard, data]);
 
   const dropdownContainerStyle = {
     display: 'flex',
@@ -75,24 +87,36 @@ const App = () => {
           setSelectedBoard(e.target.value);
           setSelectedGrade('');
           setSelectedSubject('');
+          setSelectedSpecialization('');
         }}
       />
       <Dropdown
         placeholder="Grade"
-        options={selectedBoard ? gradesData[selectedBoard] : []}
+        options={grades}
         value={selectedGrade}
         onChange={e => {
           setSelectedGrade(e.target.value);
           setSelectedSubject('');
+          setSelectedSpecialization('');
         }}
         disabled={!selectedBoard}
       />
       <Dropdown
         placeholder="Subject"
-        options={selectedGrade ? subjectsData[selectedGrade] : []}
+        options={subjects}
         value={selectedSubject}
-        onChange={e => setSelectedSubject(e.target.value)}
+        onChange={e => {
+          setSelectedSubject(e.target.value);
+          setSelectedSpecialization('');
+        }}
         disabled={!selectedGrade}
+      />
+      <Dropdown
+        placeholder="Specialization"
+        options={specializations}
+        value={selectedSpecialization}
+        onChange={e => setSelectedSpecialization(e.target.value)}
+        disabled={!selectedSubject || specializations.some(spec => spec.id === 'NULL')}
       />
     </div>
   );

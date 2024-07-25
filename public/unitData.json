@@ -1,0 +1,424 @@
+{
+  "igcse": {
+    "grade9": {
+      "science": {
+        "physics": {
+          "physical_quantities_measurements_and_techniques": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "Physics",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Physical quantities, measurements and techniques",
+            "gradeDisplayName": "Grade 9"
+          }
+        }
+      },
+      "extendedmath": {
+        "NULL": {
+          "transformations": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Extended Math",
+            "unitDisplayName": "Transformations",
+            "gradeDisplayName": "Grade 9"
+          }
+        }
+      },
+      "french": {
+        "NULL": {
+          "travel_and_transport": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "French",
+            "unitDisplayName": "Travel and transport",
+            "gradeDisplayName": "Grade 9"
+          }
+        }
+      }
+    },
+    "grade10": {
+      "hindi": {
+        "NULL": {
+          "vigyaan": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Hindi",
+            "unitDisplayName": "Vigyaan",
+            "gradeDisplayName": "Grade 10"
+          }
+        }
+      },
+      "english": {
+        "NULL": {
+          "speaking_&_listening": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "English",
+            "unitDisplayName": "Speaking & listening",
+            "gradeDisplayName": "Grade 10"
+          }
+        }
+      }
+    },
+    "grade8": {
+      "science": {
+        "NULL": {
+          "chemical_bonding": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Chemical Bonding",
+            "gradeDisplayName": "Grade 8"
+          },
+          "earth_and_beyond": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Earth and beyond",
+            "gradeDisplayName": "Grade 8"
+          }
+        }
+      }
+    },
+    "grade11": {
+      "chemistry": {
+        "NULL": {
+          "nitrogen_compounds": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Chemistry",
+            "unitDisplayName": "Nitrogen compounds",
+            "gradeDisplayName": "Grade 11"
+          }
+        }
+      }
+    },
+    "grade7": {
+      "maths": {
+        "NULL": {
+          "angles_and_constructions": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Angles and constructions",
+            "gradeDisplayName": "Grade 7"
+          }
+        }
+      }
+    },
+    "grade6": {
+      "social": {
+        "NULL": {
+          "history_key_skills_+_earliest_societies": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Social",
+            "unitDisplayName": "History key skills + earliest societies",
+            "gradeDisplayName": "Grade 6"
+          }
+        }
+      },
+      "maths": {
+        "NULL": {
+          "fractions_factors_and_multiples": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Fractions factors and multiples",
+            "gradeDisplayName": "Grade 6"
+          }
+        }
+      }
+    },
+    "grade12": {
+      "chemistry": {
+        "NULL": {
+          "carboxylic_acids_and_derivatives": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Chemistry",
+            "unitDisplayName": "Carboxylic acids and derivatives",
+            "gradeDisplayName": "Grade 12"
+          }
+        }
+      },
+      "computing": {
+        "NULL": {
+          "further_programming": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Computing",
+            "unitDisplayName": "Further programming",
+            "gradeDisplayName": "Grade 12"
+          }
+        }
+      }
+    },
+    "grade5": {
+      "science": {
+        "NULL": {
+          "electricity_and_light": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Electricity and light",
+            "gradeDisplayName": "Grade 5"
+          }
+        }
+      }
+    },
+    "grade4": {
+      "english": {
+        "NULL": {
+          "classic_literature": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "English",
+            "unitDisplayName": "Classic literature",
+            "gradeDisplayName": "Grade 4"
+          },
+          "a_playscript_book_and_film_of_the_same_story": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "English",
+            "unitDisplayName": "A playscript, book and film of the same story",
+            "gradeDisplayName": "Grade 4"
+          }
+        }
+      }
+    },
+    "grade3": {
+      "social": {
+        "NULL": {
+          "agriculture_of_telangana": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Social",
+            "unitDisplayName": "Agriculture of telangana",
+            "gradeDisplayName": "Grade 3"
+          }
+        }
+      },
+      "maths": {
+        "NULL": {
+          "statistics": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Statistics",
+            "gradeDisplayName": "Grade 3"
+          }
+        }
+      }
+    },
+    "grade2": {
+      "english": {
+        "NULL": {
+          "vowel_patterns_in_syllables_part_2": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "English",
+            "unitDisplayName": "Vowel patterns in syllables part 2",
+            "gradeDisplayName": "Grade 2"
+          }
+        }
+      }
+    },
+    "grade1": {
+      "computing": {
+        "NULL": {
+          "computational_thinking_and_programming ": {
+            "unitType": null,
+            "boardDisplayName": "IGCSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Computing",
+            "unitDisplayName": "Computational thinking and programming ",
+            "gradeDisplayName": "Grade 1"
+          }
+        }
+      }
+    }
+  },
+  "cbse": {
+    "grade9": {
+      "science": {
+        "physics": {
+          "sound": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "Physics",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Sound",
+            "gradeDisplayName": "Grade 9"
+          }
+        }
+      },
+      "telugu": {
+        "NULL": {
+          "ధర్మార్జునులు": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Telugu",
+            "unitDisplayName": "ధర్మార్జునులు",
+            "gradeDisplayName": "Grade 9"
+          }
+        }
+      }
+    },
+    "grade10": {
+      "maths": {
+        "NULL": {
+          "statistics": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Statistics",
+            "gradeDisplayName": "Grade 10"
+          }
+        }
+      }
+    },
+    "grade11": {
+      "science": {
+        "NULL": {
+          "carbon_and_its_compounds": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Carbon and its compounds",
+            "gradeDisplayName": "Grade 11"
+          }
+        }
+      }
+    },
+    "grade7": {
+      "science": {
+        "NULL": {
+          "soil": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Soil",
+            "gradeDisplayName": "Grade 7"
+          }
+        }
+      }
+    },
+    "grade6": {
+      "social": {
+        "NULL": {
+          "history_key_skills_+_earliest_societies": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Social",
+            "unitDisplayName": "History key skills + earliest societies",
+            "gradeDisplayName": "Grade 6"
+          }
+        }
+      },
+      "maths": {
+        "NULL": {
+          "fractions_factors_and_multiples": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Fractions factors and multiples",
+            "gradeDisplayName": "Grade 6"
+          }
+        }
+      }
+    },
+    "grade5": {
+      "maths": {
+        "NULL": {
+          "shapes_and_angles": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Shapes and angles",
+            "gradeDisplayName": "Grade 5"
+          }
+        }
+      }
+    },
+    "grade4": {
+      "hindi": {
+        "NULL": {
+          "व्याकरण": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Hindi",
+            "unitDisplayName": "व्याकरण",
+            "gradeDisplayName": "Grade 4"
+          }
+        }
+      }
+    },
+    "grade3": {
+      "social": {
+        "NULL": {
+          "agriculture_of_telangana": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Social",
+            "unitDisplayName": "Agriculture of telangana",
+            "gradeDisplayName": "Grade 3"
+          }
+        }
+      },
+      "maths": {
+        "NULL": {
+          "statistics": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Maths",
+            "unitDisplayName": "Statistics",
+            "gradeDisplayName": "Grade 3"
+          }
+        }
+      }
+    },
+    "grade2": {
+      "science": {
+        "NULL": {
+          "food": {
+            "unitType": null,
+            "boardDisplayName": "CBSE",
+            "specializationDisplayName": "NULL",
+            "subjectDisplayName": "Science",
+            "unitDisplayName": "Food",
+            "gradeDisplayName": "Grade 2"
+          }
+        }
+      }
+    }
+  }
+}

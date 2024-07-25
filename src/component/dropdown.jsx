@@ -1,5 +1,3 @@
-// src/Dropdown.jsx
-
 import React from 'react';
 
 const Dropdown = ({ placeholder, options, value, onChange, disabled }) => {
